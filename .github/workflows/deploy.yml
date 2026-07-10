@@ -18,7 +18,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::428232898088:role/github-ssm-demo-role
-          aws-region: ap-south-1a
+          aws-region: ap-south-1
 
       - name: Find instance
         run: |
