@@ -35,7 +35,8 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --comment "Deploy from GitHub Actions" \
             --parameters '{"commands":[
-              "cd /var/www/html/app || exit 1",
+              "set -e",
+              "cd /var/www/html/app",
               "git pull origin main",
               "sudo systemctl restart httpd"
             ]}' \
